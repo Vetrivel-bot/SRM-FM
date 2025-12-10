@@ -1,13 +1,14 @@
-import { ScreenContent } from 'components/ScreenContent';
-import { StatusBar } from 'expo-status-bar';
-
 import './global.css';
+
+// App.js
+import React from 'react';
+import { ThemeProvider } from './context/ThemeContext';
+import HomeScreen from './screens/HomeScreen'; // Your main screen
 
 export default function App() {
   return (
-    <>
-      <ScreenContent title="Home" path="App.tsx"></ScreenContent>
-      <StatusBar style="auto" />
-    </>
+    <ThemeProvider>
+      <HomeScreen />
+    </ThemeProvider>
   );
 }
